@@ -42,3 +42,15 @@
     # nmap scrips -> scripts that other people wrote
     nmap --script vuln <ip to scan for vunrablilites> 
     ```
+- `nc` - read and write data throw TCP and UDP connection
+    ```bash
+    # run a server with netcat
+    nc -l host port 
+    # connect through a socket
+    nc host port
+    ```
+- `openssl s_client` - ssl and stl client
+    ```bash
+    openssl s_client -connect host:port
+    ```
+
