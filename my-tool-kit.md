@@ -11,7 +11,7 @@
 # Reversing
 - `strings` - get all the human readable strings inside a file
 - `file` - get the file format
-    ```
+    ```bash
     # debugging info
     file -d <filename>
     # report info about compressed file
@@ -25,7 +25,7 @@
 
 # Netowrking
 - `nmap`
-    ```
+    ```bash
     # show who is connect to the current network 
     nmap -sP <netwok ip>
     #finds server on specify porst using TCP three way handshake 
