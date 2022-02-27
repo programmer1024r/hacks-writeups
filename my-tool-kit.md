@@ -1,12 +1,7 @@
 # Basic tools
 - `du -h <file name>` - human readable file and directories size
-- `ssh` 
-    ```bash
-    ssh username@host -p <port>
-    # enter with ceritficate 
-    ssh -i ssh_private.key username@host -p <port>
-    ```
 - `base64` decode encrypted data with base64
+- `tar -xf <file name>` - extract tar files
 
 # Reversing
 - `strings` - get all the human readable strings inside a file
@@ -24,11 +19,17 @@
 - `objdump` - reverse an executable file
 
 # Netowrking
+- `ssh` 
+    ```bash
+    ssh username@host -p <port>
+    # enter with ceritficate 
+    ssh -i ssh_private.key username@host -p <port>
+    ```
 - `nmap`
     ```bash
     # show who is connect to the current network 
     nmap -sP <netwok ip>
-    #finds server on specify porst using TCP three way handshake 
+    # finds server on specify porst using TCP three way handshake 
     nmap -sT -p 80,443 <netwok ip> 
     # for scanning the network more secured (only syn connection)
     # if you don't specify ports then namp will take the most 1000 common ports and scan them
