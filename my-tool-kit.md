@@ -3,6 +3,7 @@
 - `base64` - decode encrypted data with base64
 - `tar -xf <file name>` - extract tar files
 - `diff`- compares two files line by line
+- `git log --all` show all commits!
 
 # Linux
 - `setuid` - a file flag, that tells that the current user can execute the specific file as the file's creator user.
@@ -12,6 +13,9 @@ the flage symbol is `s`.
     ```
      
     ```
+- `more` - cat file.txt | less
+- `/etc/passwd` - file with info about users.
+- `dash` - shell for debian.
 
 # Reversing
 - `strings` - get all the human readable strings inside a file
@@ -36,6 +40,8 @@ the flage symbol is `s`.
     ssh -i ssh_private.key username@host -p <port>
     # You can add a command to automatically execute when the ssh connection is started
     ssh username@host -p <port> [command]
+    # enter a shell inside current machine
+    ssh username@localhost 
     ```
 - `nmap`
     ```bash
