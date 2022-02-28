@@ -8,6 +8,10 @@
 - `setuid` - a file flag, that tells that the current user can execute the specific file as the file's creator user.
 the flage symbol is `s`.
 - `cron` - cron is a daemon to execute scheduled commands. The cron config is inside `/etc/cron.d`.
+- `tmux / screen` - terminal managers. tmux basic commands:
+    ```
+     
+    ```
 
 # Reversing
 - `strings` - get all the human readable strings inside a file
