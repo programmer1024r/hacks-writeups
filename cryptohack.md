@@ -36,6 +36,9 @@ print("key that we got: ", key)
 key = "myXORkey".encode()
 print(xor(message, key).decode()) 
 ```
+## Math
+Mod = modulus (%), 19 = 24 (mod 5). 
+
 
 ### python conversion
 - `bytes.fromhex()`
