@@ -13,4 +13,9 @@ Practice Resources
 - http://pwnable.kr/
 - http://www.pwnadventure.com/
 - https://pwnable.tw/
-- 
+
+
+## Tools
+- checksec 
+- readelf -s 
+- pwn cyclic
