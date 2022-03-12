@@ -14,3 +14,6 @@
 - license checker, crackmes.one
 - mars analytica, crackmes.one
  
+ #### Linux
+ - bandit, overthewire.
+ - hackthebox academy linux course.
