@@ -36,8 +36,16 @@ print("key that we got: ", key)
 key = "myXORkey".encode()
 print(xor(message, key).decode()) 
 ```
-## Math
-Mod = modulus (%), 19 = 24 (mod 5). 
+## Modular Arithmetics
+Mod = modulus (%), 19 = 24 (mod 5). <br>
+
+#### Fermat's little theorem [WIKI](https://en.wikipedia.org/wiki/Fermat%27s_little_theorem)
+prime filed {-p+1,..-2, -1, 0, 1, ...., p-1}<br>
+```
+p = prime number
+n^p mod p = n
+n^p-1 mod p = 1
+```
 
 
 ### python conversion
