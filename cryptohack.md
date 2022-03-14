@@ -47,6 +47,12 @@ n^p mod p = n
 n^p-1 mod p = 1
 ```
 
+#### Multiplicative Inverse of `g`
+```
+g * d = 1 mod p
+1 mod p = almost always 1
+meaning when does g*d mod p = 1
+```
 
 ### python conversion
 - `bytes.fromhex()`
