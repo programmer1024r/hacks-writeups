@@ -28,10 +28,10 @@
  - hackthebox academy linux course.
  
 # Road map
-- [ ] overthewire narina && cryptohack modular arithemtics
-- [ ] pwn wargame && cryptohack symmetric cryptography
-- [ ] overthewire natas && cryptohack public-key cryptography
-- [ ] crackmes.one && hackthebox && cryptohack elliptic curves
+- [ ] overthewire narina && cryptohack topics and learn them yourself.
+- [ ] pwn wargame && practice crypto CTFs.
+- [ ] overthewire natas && pwn and crypto CTFs.
+- [ ] crackmes.one && hackthebox && CTFs.
 - [ ] a lot of ctfs && try forensics / stego.
 
  
