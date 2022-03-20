@@ -55,9 +55,22 @@ meaning when does g*d mod p = 1
 ```
 #### Quadratic Residue
 ```
-a^2 = x mod p
+a^2 =_ x mod p
 ```
-x is the quadratic residue
+x is the quadratic residue<br>
+to check if an integer is quadratic residue a it firsts needs to obey this role
+```
+(a / p) =_ a^((p-1)/2) mod p 
+
+(a / p) = 1 (is)
+(a / p) = -1 (isn't)
+(a / p) = 0 (0 mod p)
+```
+
+```
+a^((p-1)/2) mod p -> can determine if the a is quadratic residue
+pow(a,(p-1)/2, mod=p)
+```
 
 
 ### python conversion
