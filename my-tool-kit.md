@@ -13,6 +13,8 @@ the flage symbol is `s`.
     ```
      
     ```
+- `echo -e` with \x can represent hex in the bash shell.
+- (command; command;) called command grouping. you can pipe it into another program to run these commands.
 - `more` - cat file.txt | less
 - `/etc/passwd` - file with info about users.
 - `dash` - shell for debian.

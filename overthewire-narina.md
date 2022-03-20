@@ -39,12 +39,66 @@ The program input 24 chars of string into buff, which is already a buffer overfl
     
 ## solution
 #### steps
-- from the first input `20*a+0xdeadbeef`, we can infer two things little indian.
+- from the first input `20*a+0xdeadbeef`, we can infer three things:<br>
+  1. the input only scan 4 more bytes
+  2. the output is reversed meaning the order is little indian
+  3. 0x would not help use get values as hex values
+- now deadbeef would be in little indian every byte at the end goes to the start
+- efbeadde in hex. in the bash shell hex can be represent by \x.
+- `aaaaaaaaaaaaaaaaaaaa\xef\xbe\xad\xde`
+- lastly in order to stay inside the shell we need to run a command inside the new shell
+- `(echo -e "aaaaaaaaaaaaaaaaaaaa\xef\xbe\xad\xde"; cat;) | ./narnia0` this is called command group.
 
 
 
+## Level 2
+```C
+#include <stdio.h>
 
+int main()
+{
+    int (*ret)();
+
+    if(getenv("EGG")==NULL)
+    {
+        printf("Give me something to execute at the env-variable EGG\n");
+        exit(1);
+    }
+
+    printf("Trying to execute EGG!\n");
+    ret = getenv("EGG");
+    ret();
+
+    return 0;
+}
+```
+### anlays
+- getenv() - gets the value of the given global variable<br>
+  they use getenv() instead of secure_getenv(), to enable not only the creator of this exe to enter environment variable.
+- to set environment variables in linux, `EGG="test"`, `export` keywoard would make the variable scope inside all derive process.
+- we can only pass a function that returns integer and doesn't get parameters and is built in the stdio.h library.<br>
+  tested system and printf functions but the function throws segmentation fault.
+- 
+### Attemps
+- add a `export EGG="system(\"bin/sh\")"`, didn't work. The idea is to pass that will run the command `cat /etc/narnia_pass/narnia2`
+- use bash functions, `export EGG="expliot(){cat /etc/narnia_pass/narnia2}"`, no luck...
+- use c functions, the problem is that we need to create a function declaration a line before.
+  ```C
+  int main() 
+  {
+    int (*ret)();
+    
+    int test() { printf("s"); } 
+
+    ret = test;
+    ret();
+    return 0;
+  }
+  ```
+- 
 ### Passwords
+level
+- 0 -> `efeidiedae` : no time + help
 
 
 ## Buffer overflow

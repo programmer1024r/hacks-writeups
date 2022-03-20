@@ -53,6 +53,12 @@ g * d = 1 mod p
 1 mod p = almost always 1
 meaning when does g*d mod p = 1
 ```
+#### Quadratic Residue
+```
+a^2 = x mod p
+```
+x is the quadratic residue
+
 
 ### python conversion
 - `bytes.fromhex()`
