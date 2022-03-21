@@ -1,4 +1,4 @@
-## PWN
+# PWN
 executable files
 - stripped can not be debugged.<br>
 - program exit with code 127, meaning bash "command not found"
@@ -14,6 +14,10 @@ Practice Resources
 - http://www.pwnadventure.com/
 - https://pwnable.tw/
 
+
+### Exploit types
+##### shellcoding
+##### buffer overflow
 
 ## Tools
 - checksec 

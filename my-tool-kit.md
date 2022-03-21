@@ -33,6 +33,10 @@ the flage symbol is `s`.
 - `strace` - trace syscalls
 - `ltrace` - trace libraries
 - `objdump` - reverse an executable file
+- `gdb`
+  ```
+  x/25x $eax inside a runing program will show the next 25 values that are set for the eax register.
+  ```
 
 # Netowrking
 - `ssh` 
