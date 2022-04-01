@@ -7,11 +7,17 @@
 
 # Linux
 - `setuid` - a file flag, that tells that the current user can execute the specific file as the file's creator user.
+- `wc -c` - number of bytes a file have
+- truncate -s -1 /tmp/x -> removes a file end
 the flage symbol is `s`.
 - `cron` - cron is a daemon to execute scheduled commands. The cron config is inside `/etc/cron.d`.
 - `tmux / screen` - terminal managers. tmux basic commands:
     ```
-     
+    ctrl + b + % -> vertical split
+    ctrl + b + " horizontal
+    ctrl + b + arrows -> move between splits
+    ctrl + b + arrows holding -> resize splits
+    exit - exit
     ```
 - `echo -e` with \x can represent hex in the bash shell.
 - (command; command;) called command grouping. you can pipe it into another program to run these commands.
