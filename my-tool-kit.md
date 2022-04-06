@@ -39,9 +39,29 @@ the flage symbol is `s`.
 - `strace` - trace syscalls
 - `ltrace` - trace libraries
 - `objdump` - reverse an executable file
+  ```
+  - objdump -t | grep func name -> find function address
+  ```
 - `gdb`
   ```
-  x/25x $eax inside a runing program will show the next 25 values that are set for the eax register.
+  gcc -g -> for symbols
+  tui disable (close layout window)
+  disas main
+  x/<num of bytes><format> $<register>
+  (formats -> i for instruction and $eip)
+  Example:
+   - x/100s $ebp -> shows the first 100 bytes as a string from the stack frame
+  b *assembly addr
+  info registers/frame/proc mappings
+  o
+  gdb hooks -> a functions that will run every time we do something depending on its name:
+  define hook-stop -> for break point
+  i r
+  end
+  
+  the address space in gdb:
+  0x0  
+  0xff
   ```
 
 # Netowrking
