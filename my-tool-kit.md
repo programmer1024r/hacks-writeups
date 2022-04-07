@@ -59,6 +59,7 @@ the flage symbol is `s`.
   i r
   end
   
+  set exec-wrapper env -u LINES -u COLUMNS
   the address space in gdb:
   0x0  
   0xff
